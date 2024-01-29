@@ -23,7 +23,7 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 ### Links
 
 - Solution URL: [Solution](https://github.com/m07mmad-nasr/testimonials-grid-section-challenge-12)
-- Live Site URL: [Live Site](w)
+- Live Site URL: [Live Site](https://testimonials-grid-section-challenge-12.vercel.app/)
 
 ## My process
 

@@ -61,7 +61,7 @@ body {
 }
 body {
   min-height: 100vh;
-  background-color: hsl(0, 0%, 81%);
+  background-color: hsl(210, 46%, 95%);
   display: grid;
   place-content: center;
 }
@@ -98,6 +98,11 @@ main article > section img {
 }
 main article > section h2 {
   font-size: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+main article > section h1 {
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
 }
 main article > section p {
   font-size: 0.8rem;
@@ -127,6 +132,13 @@ main article:nth-child(3) {
   background-color: hsl(0, 0%, 100%);
   grid-area: four;
 }
+main article:nth-child(3) h2 {
+  font-size: 1rem;
+  color: #000000;
+}
+main article:nth-child(3) > section p {
+  color: #000000;
+}
 main article:nth-child(3) > p {
   color: #000000;
 }
@@ -137,6 +149,13 @@ main article:nth-child(4) {
 main article:nth-child(5) {
   background-color: hsl(0, 0%, 100%);
   grid-area: three;
+}
+main article:nth-child(5) h2 {
+  font-size: 1rem;
+  color: #000000;
+}
+main article:nth-child(5) > section p {
+  color: #000000;
 }
 main article:nth-child(5) > p {
   color: #000000;

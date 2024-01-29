@@ -11,7 +11,7 @@ $font: "Barlow Semi Condensed", sans-serif;
 
 body {
   min-height: 100vh;
-  background-color: $Light-gray;
+  background-color: $Light-grayish-blue;
   display: grid;
   place-content: center;
 }
@@ -43,6 +43,11 @@ main {
 
       h2 {
         font-size: 1rem;
+        color: $White;
+      }
+      h1 {
+        font-size: 1rem;
+        color: $White;
       }
       p {
         font-size: 0.8rem;
@@ -77,7 +82,15 @@ main {
   article:nth-child(3) {
     background-color: $White;
     grid-area: four;
-
+    h2 {
+      font-size: 1rem;
+      color: $black;
+    }
+    > section {
+      p {
+        color: $black;
+      }
+    }
     > p {
       color: $black;
     }
@@ -91,7 +104,15 @@ main {
   article:nth-child(5) {
     background-color: $White;
     grid-area: three;
-
+    h2 {
+      font-size: 1rem;
+      color: $black;
+    }
+    > section {
+      p {
+        color: $black;
+      }
+    }
     > p {
       color: $black;
     }
