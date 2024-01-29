@@ -1,0 +1,154 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*fonts varibles*/
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 81%);
+  display: grid;
+  place-content: center;
+}
+
+main {
+  min-width: 75%;
+  max-width: 90%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "one one two three" "four five five three";
+  gap: 2rem;
+}
+main article {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+main article > section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+main article > section img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid hsl(0, 0%, 81%);
+  margin-right: 1rem;
+}
+main article > section h2 {
+  font-size: 1rem;
+}
+main article > section p {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 100%);
+  opacity: 50%;
+}
+main article > p:first-of-type {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+main article > p:last-of-type {
+  color: hsl(0, 0%, 100%);
+}
+main article:nth-child(1) {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+  grid-area: one;
+  background-color: hsl(263, 55%, 52%);
+}
+main article:nth-child(2) {
+  grid-area: two;
+  background-color: hsl(217, 19%, 35%);
+}
+main article:nth-child(3) {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: four;
+}
+main article:nth-child(3) > p {
+  color: #000000;
+}
+main article:nth-child(4) {
+  background-color: hsl(219, 29%, 14%);
+  grid-area: five;
+}
+main article:nth-child(5) {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: three;
+}
+main article:nth-child(5) > p {
+  color: #000000;
+}
+
+@media (min-width: 750px) and (max-width: 1250px) {
+  main {
+    grid-template-areas: "one one one one" "two two four four" "five five three three ";
+  }
+}
+@media (max-width: 750px) {
+  main {
+    grid-template-areas: "one one one one" "two two two two" "four four four four" "five five five five" "three three three three";
+  }
+}

@@ -1,0 +1,119 @@
+@use "./sass/layouts/global-rules";
+
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+$black: #000000;
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+$font: "Barlow Semi Condensed", sans-serif;
+
+body {
+  min-height: 100vh;
+  background-color: $Light-gray;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  min-width: (75%);
+  max-width: (90%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "one one two three" "four five five three";
+  gap: 2rem;
+
+  article {
+    font-family: $font;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    > section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid $Light-gray;
+        margin-right: 1rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.8rem;
+        color: $White;
+        opacity: 50%;
+      }
+    }
+    > p:first-of-type {
+      color: $White;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    > p:last-of-type {
+      color: $White;
+    }
+  }
+
+  article:nth-child(1) {
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+    grid-area: one;
+    background-color: $Moderate-violet;
+  }
+
+  article:nth-child(2) {
+    grid-area: two;
+    background-color: $Very-dark-grayish-blue;
+  }
+
+  article:nth-child(3) {
+    background-color: $White;
+    grid-area: four;
+
+    > p {
+      color: $black;
+    }
+  }
+
+  article:nth-child(4) {
+    background-color: $Very-dark-blackish-blue;
+    grid-area: five;
+  }
+
+  article:nth-child(5) {
+    background-color: $White;
+    grid-area: three;
+
+    > p {
+      color: $black;
+    }
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1250px) {
+  main {
+    grid-template-areas:
+      "one one one one"
+      "two two four four"
+      "five five three three ";
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    grid-template-areas:
+      "one one one one"
+      "two two two two"
+      "four four four four"
+      "five five five five"
+      "three three three three";
+  }
+}
